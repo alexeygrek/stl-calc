@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+<title>Example - STLCalc</title>
+</head>
+<style>
+html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100% }
+body { margin: 0; padding: 20px; font: 300 14px/20px Arial, Helvetica, sans-serif; color: #313133; background-color: #fff }
+label, input, button, select, textarea { margin: 0 0 20px 0; font-family: inherit; font-size: inherit; line-height: inherit }
+a { color: #313133; text-decoration: none }
+a:hover, a:focus { color: #313133; text-decoration: underline }
+a:focus { outline: thin dotted; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px }
+.heading { display: block; margin: 0 0 20px 0 }
+.form {}
+.note { font-style: italic }
+</style>
+<body>
+<b class="heading">STLCalc</b>
+<div class="wrapper">
+	<form class="form" action="example.php" method="post" enctype="multipart/form-data">
+		<label for="file">File:</label>
+		<input type="file" name="file" id="file">
+		<input type="submit" name="submit" value="Submit">
+	</form>
+	<div class="note">Note: Allow .stl files only.</div>
+</div>
+</body>
+</html>
