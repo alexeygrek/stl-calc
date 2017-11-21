@@ -2,6 +2,17 @@
 -----
 Simple and available way to calculate the cost of 3D printing STL model.
 
+### Introduction
+-----
+
+STL format is widely used to represent information about 3D objects in 3D printing. It is important to know the volume, weight and cost of material that can turn into an object on a 3D printer, before starting 3D printing. This method helps to calculate the cost, materials spent and, in fact, the time of 3D printing of a 3D product.
+
+Automatic recognition of ASCII and BINARY formats is supported.
+
+PHP code has been commented on.
+
+The use of this implementation is available in a simple example.
+
 ### Install
 -----
 Follow these steps to start using the **STLCalc class** in your applications:
