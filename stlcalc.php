@@ -1,5 +1,10 @@
 <?php
 
+/*
+ * (c) ALEXEYGREK Studio
+ * https://alexeygrek.com
+ */
+
 class STLCalc {
 
 	// Properties
