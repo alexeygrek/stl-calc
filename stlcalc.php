@@ -98,7 +98,7 @@ class STLCalc {
 			fclose ( $this->fstl_handle );
 		} else {
 			$k = 0;
-			while ( sizeof ( $this->triangles_data[4] ) > 0 ) {
+			while ( count ( $this->triangles_data[4] ) > 0 ) {
 				$totalVolume += $this->ReadTriangleAscii();
 				$k += 1;
 			}
@@ -119,7 +119,7 @@ class STLCalc {
 		if ( gettype ( $mystuff ) == 'array' ) {
 			$myarr = array_merge ( $myarr, $mystuff );
 		} else {
-			$ctr = sizeof ( $myarr );
+			$ctr = count ( $myarr );
 			$myarr[$ctr] = $mystuff;
 		}
 		return $myarr;
@@ -144,7 +144,7 @@ class STLCalc {
 		$p3	= $this->PhUnpack ( 'f3', 12 );
 		$b	= $this->PhUnpack ( 'v', 2 );
 
-		$l = sizeof ( $this->points );
+		$l = count ( $this->points );
 		$this->PhAppend ( $this->triangles, array ( $l, $l+1, $l+2 ) );
 		return $this->SignedVolumeOfTriangle ( $p1, $p2, $p3 );
 	}
@@ -160,7 +160,7 @@ class STLCalc {
 		$p3[1] = floatval ( array_pop ( $this->triangles_data[10] ) );
 		$p3[2] = floatval ( array_pop ( $this->triangles_data[11] ) );
 		$p3[3] = floatval ( array_pop ( $this->triangles_data[12] ) );
-		$l = sizeof ( $this->points );
+		$l = count ( $this->points );
 		$this->PhAppend ( $this->triangles, array ( $l, $l+1, $l+2 ) );
 		return $this->SignedVolumeOfTriangle ( $p1, $p2, $p3 );
 	}
@@ -176,7 +176,7 @@ class STLCalc {
 			. 'endloop\\s+' . 'endfacet/';
 		$fdata = file_get_contents ( $filename );
 		preg_match_all ( $namePattern, $fdata, $matches );
-		if ( sizeof ( $matches[0] ) > 0 ) {
+		if ( count ( $matches[0] ) > 0 ) {
 			$b = TRUE;
 			$this->triangles_data = $matches;
 		}
